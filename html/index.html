@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xem phim chất lượng cao, cập nhật phim mới nhất, phim bộ, phim lẻ, phim chiếu rạp">
+    <title>FilmsWeb - Xem phim chất lượng cao</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="nav-logo">
+                <h1>Films<span>Web</span></h1>
+            </a>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Tìm kiếm phim..." id="search-input">
+            </div>
+            
+        
+            
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <div class="chu">
+                    <span class="tag">Mới cập nhật</span>
+                    <h1 id="movie-title">Đang tải...</h1>
+                    <div class="meta">
+                        <span class="rating"><i class="fas fa-star"></i> <span id="movie-rating">0.0</span></span>
+                        <span class="year" id="movie-year">2023</span>
+                        <span class="duration" id="movie-duration">120 phút</span>
+                    </div>
+                    <p id="movie-overview">Đang tải mô tả phim...</p>
+                    <div class="button-group">
+                        <button class="btn btn-primary" id="watch-now">
+                            <i class="fas fa-play"></i> Xem ngay
+                        </button>
+                        <button class="btn btn-secondary" id="more-info">
+                            <i class="fas fa-info-circle"></i> Chi tiết
+                        </button>
+                        <button class="btn btn-secondary" id="random-movie">
+                            <i class="fas fa-random"></i> Random phim
+                        </button>
+                    </div>
+                </div>
+                <div class="anh">
+                    <div class="movie-poster">
+                        <img id="anh_phim" src="" alt="Poster phim" loading="lazy">
+                        <button class="play-button" type="button" aria-label="Xem phim">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movie Sections -->
+    <main class="main-content">
+        <!-- Phim HOT -->
+        <section class="hot section" id="phim-hot">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-fire"></i> Phim HOT</h2>
+                    <div class="view-all">
+                        <a href="#" class="view-more">Xem tất cả <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="loading" id="loading-hot">
+                    <div class="spinner"></div>
+                </div>
+                <div class="ds_hot" id="ds_hot"></div>
+            </div>
+        </section>
+
+        <!-- Phim mới cập nhật -->
+        <section class="section" id="phim-moi">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-film"></i> Phim mới cập nhật</h2>
+                    <div class="view-all">
+                        <a href="#" class="view-more">Xem tất cả <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="loading" id="loading-new">
+                    <div class="spinner"></div>
+                </div>
+                <div class="ds_moi" id="ds_moi"></div>
+            </div>
+        </section>
+
+        <section class="section where-to-watch" id="xem-phim-o-dau">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-location-arrow"></i> Xem phim ở đâu</h2>
+                </div>
+                <div class="where-grid">
+                    <div class="where-card">
+                        <div class="where-icon"><i class="fab fa-imdb"></i></div>
+                        <h3>IMDb (thông tin phim)</h3>
+                        <p>Bấm nút Play trên card phim để mở IMDb và xem chi tiết thông tin, diễn viên, đánh giá.</p>
+                    </div>
+
+                    <div class="where-card">
+                        <div class="where-icon"><i class="fas fa-search"></i></div>
+                        <h3>Tìm kiếm nhanh (thông tin phim)</h3>
+                        <p>Dùng ô tìm kiếm ở đầu trang để tìm phim theo tên, sau đó chọn phim để tìm hiểu nó.</p>
+                    </div>
+                    <div class="where-card">
+                        <div class="where-icon"><i class="fas fa-film"></i></div>
+                        <h3>Rạp chiếu phim</h3>
+                        <p>Nếu phim đang chiếu rạp, bạn có thể xem trực tiếp tại các cụm rạp (tùy khu vực).</p>
+                        <ul class="where-list">
+                            <li>CGV</li>
+                            <li>Lotte Cinema</li>
+                            <li>Galaxy Cinema</li>
+                            <li>BHD Star</li>
+                        </ul>
+                    </div>
+                    <div class="where-card">
+                        <div class="where-icon"><i class="fas fa-credit-card"></i></div>
+                        <h3>Dịch vụ xem phim trả phí</h3>
+                        <p>Một số phim/series có bản quyền sẽ xem trên nền tảng trả phí (thuê/mua hoặc gói subscription).</p>
+                        <ul class="where-list">
+                            <li>Netflix</li>
+                            <li>Disney+</li>
+                            <li>HBO Max</li>
+                            <li>Apple TV+</li>
+                            <li>Amazon Prime Video</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Giới thiệu</h3>
+                    <p>Giúp bạn tìm kiếm thông tin về phim và theo dõi chúng</p>
+                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FilmsWeb. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Lên đầu trang">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>
